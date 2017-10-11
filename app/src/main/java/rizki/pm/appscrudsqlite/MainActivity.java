@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         viewAllEmployeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ViewAllEmployees.class);
+                Intent i = new Intent(MainActivity.this, ViewAllEmployee.class);
                 startActivity(i);
             }
         });
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     public void getEmpIdAndUpdateEmp(){
 
         LayoutInflater li = LayoutInflater.from(this);
-        View getEmpIdView = li.inflate(R.layout.dialog_get_emp_id, null);
+        View getEmpIdView = li.inflate(R.layout.dialog_get_id, null);
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         // set dialog_get_emp_id.xml to alertdialog builder
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     public void getEmpIdAndRemoveEmp(){
 
         LayoutInflater li = LayoutInflater.from(this);
-        View getEmpIdView = li.inflate(R.layout.dialog_get_emp_id, null);
+        View getEmpIdView = li.inflate(R.layout.dialog_get_id, null);
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         // set dialog_get_emp_id.xml to alertdialog builder
@@ -140,16 +140,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        employeeOps.open();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        employeeOps.close();
-
-    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        employeeOps.open();
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        employeeOps.close();
+//
+//    }
 }

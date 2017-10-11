@@ -2,6 +2,7 @@ package rizki.pm.appscrudsqlite;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -143,7 +144,6 @@ public class AddUpdateEmployee extends AppCompatActivity {
     }
 
 
-    @Override
     public void onFinishDialog(Date date) {
         hireDateEditText.setText(formatDate(date));
 
